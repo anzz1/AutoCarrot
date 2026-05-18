@@ -2,6 +2,10 @@ if not AutoCarrotDB then
     AutoCarrotDB = { enabled = true, ridingGloves = true, mithrilSpurs = true, swimBelt = true, swimHelm = true, button = false, buttonScale = 1.0, trinketSlot1 = false, instance = false }
 end
 
+-- Container API moved to C_Container in Classic Era 1.15 / Anniversary / retail
+local GetContainerNumSlots = (C_Container and C_Container.GetContainerNumSlots) or GetContainerNumSlots
+local GetContainerItemLink = (C_Container and C_Container.GetContainerItemLink) or GetContainerItemLink
+
 local CROP_OR_CARROT_ID = nil
 local hasEnteredWorld = false
 local f = CreateFrame("Frame")
