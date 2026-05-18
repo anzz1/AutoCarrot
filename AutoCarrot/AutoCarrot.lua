@@ -2,6 +2,9 @@ if not AutoCarrotDB then
     AutoCarrotDB = { enabled = true, ridingGloves = true, mithrilSpurs = true, swimBelt = true, swimHelm = true, button = false, buttonScale = 1.0, trinketSlot1 = false, instance = false }
 end
 
+local GetContainerNumSlots = GetContainerNumSlots or C_Container.GetContainerNumSlots
+local GetContainerItemLink = GetContainerItemLink or C_Container.GetContainerItemLink
+
 local CROP_OR_CARROT_ID = nil
 local hasEnteredWorld = false
 local f = CreateFrame("Frame")
